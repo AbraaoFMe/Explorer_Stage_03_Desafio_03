@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --animation-config: 1s;
+}
+
+.board {
+    position: relative;
+
+    width: 1440px;
+    height: 1024px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+}
+
+.holes-wrapper {
+    display: grid;
+    grid-template-areas: 
+        "A B C D"
+        "E F G H"
+        "I J K L";
+    
+    gap: 80px 60px;
+}
+
+.mole {
+    position: relative;
+
+    z-index: 1;
+
+    animation: mole var(--animation-config);
+}
+
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+}
+
+.frame1 {
+    animation: frame1 var(--animation-config);
+}
+
+.frame2 {
+    animation: frame2 var(--animation-config);
+}
+
+.frame3 {
+    animation: frame3 var(--animation-config);
+}
+
+.frame4 {
+    animation: frame4 var(--animation-config);
+}
+
+.frame5 {
+    animation: frame5 var(--animation-config);
+}
+
+@keyframes mole {
+    0% {
+        display: block;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+@keyframes frame1 {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+
+    }
+
+    40% {
+        opacity: 0;
+    }
+}
+
+@keyframes frame2 {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+@keyframes frame3 {
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+}
+
+@keyframes frame4 {
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+} 
+
+@keyframes frame5 {
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+} 
